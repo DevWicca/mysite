@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.btn:hover{
+  color: #fff
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.row {
+  display: block ;
+}
+.btn{
+  color: #fff ;
+}
+
+.Profile header {
+  background: url(https://res.cloudinary.com/wicca/image/upload/v1553730527/william-daigneault-1176273-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 950px;
+}
+.Profile .section{
+  padding-top: 4vw ;
+  padding-bottom: 4vw ;
+}
+#mobile-nav {
+  background-color: black ;
+  
+}
+.Profile .paddingbot{
+  padding-bottom: 3vw ;
+}
+.Profile .paddingtop{
+  padding-top: 2vw ;
+}
+.Profile .tabs .indicator{
+  background-color:#3f51b5 ;
+}
+.Profile .tabs .tab a:focus, .tabs .tab a:focus.active{
+  background-color: transparent;
+  
+}
+.Profile .tabs .tab a:hover, .tabs .tab a.active{
+  color: #1a237e;
+}
+.Profile .tabs .tab a{
+  color: #3f51b5
+}
+.Profile .parallax-container{
+  height: 300px;
+}
+
+/* ------------ GraphQL-------------  */
+ .graphiql select{
+      display: block;
+}
+body {
+  background: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main h1{
+  color:#444;
+  text-align: center;
+
+}
+
+#main{
+  padding: 0px;
+  box-sizing: border-box;
+  width: 60%;
+  height: 100%;
+}
+
+#book-list{
+  padding: 0;
+}
+
+#book-list li{
+  display: inline-block;
+  margin:12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #880E4F;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+  color: #880E4F;
+}
+.flex{
+  display: flex;
+}
+.graphiql form{
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  left:0;
+  bottom:0;
+  width: 400px;
+}
+
+.graphiql form .field{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.graphiql form label{
+  text-align: right;
+  padding: 6px
+}
+.graphiql form select,form input {
+  margin:4px;
+  padding:6px;
+  box-sizing: border-box;
+}
+
+.graphiql form button{
+  color:#fff;
+  font-size:2em;
+  background: #AD1457;
+  border:0;
+  padding:0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+}
+
+#book-details{
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: #AD1457;
+  padding: 30px;
+  overflow: auto;
+  box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* -------------     ItemlistMrenRedux     ------------- */
+
+.ItemlistMrenRedux .remove-btn{
+  margin-right: 0.5rem;
+}
+.ItemlistMrenRedux .fade-enter {
+opacity: 0.01;
+}
+
+.ItemlistMrenRedux .fade-enter-active{
+opacity: 1;
+transition: opacity 1000ms ease-in;
+}
+
+.ItemlistMrenRedux .fade-exit {
+opacity: 1;
+}
+
+.ItemlistMrenRedux .fade-exit-active {
+opacity: 0.01;
+transition: opacity 1000ms ease-in
+}
+
+
+a .active {
+  color:red;
+}
