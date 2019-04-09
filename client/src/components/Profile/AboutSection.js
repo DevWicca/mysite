@@ -7,11 +7,11 @@ const AboutSection = () => (
         <Col s={12} l={5}  >
                 <div>
                     <h1 className="indigo-text text-darken-4 center">About me </h1>
-                    <p className="center">rello Is the Fun, Flexible and Free Way To Organize Plans, Projects & More. Go From Idea To Action In Seconds With Trello’s Intuitively Simple Boards, Lists & Cards. Work Offline. Available in 21 Languages. Agile Kanban Boards. iOS & Android Apps. Join 25 Million People.</p>
+                    <p className="center">Motivated Software Engineer experience creating, testing, and evaluating software systems and applications. Proven track record in generating ideas to improve system design and streamline product delivery to enhance customer satisfaction and drive sales and profits. Ability to make good technical decisions that positively impact adjacent systems or provide useful features.</p>
                 </div>
             </Col>
-        <Col s={12} l={5} active offset="l2">
-        <h4 className="center paddingbot indigo-text text-darken-4">Skills</h4>
+        <Col s={12} l={5}  offset="l2">
+        <h1 className="center paddingbot indigo-text text-darken-4">Skills</h1>
             <Tabs s={12} l={12} className="tab-demo z-depth-1 ">
                 <Tab tabWidth={6} l={6} active={true} title="FrontEnd" >
                     <h5 className='indigo-text text-darken-4 center paddingbot paddingtop'>FRONTEND</h5>
