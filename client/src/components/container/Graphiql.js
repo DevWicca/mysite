@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost'
 import {ApolloProvider} from 'react-apollo'
+import {Container, Button} from "react-materialize"
+import {Link} from "react-router-dom"
 
 // Components
 import BookList from '../Graphiql/BookList'
@@ -15,11 +17,12 @@ class Graphiql extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <div className="main graphiql">
-          <h1>Wicca Reading List</h1>
+        <Container className="main graphiql">
+          <h1 className="center">Graphql Book List</h1>
+          <Link  to="/"><Button className=' teal'>home</Button></Link>
           <BookList/>
           <AddBook/>
-        </div>
+        </Container>
       </ApolloProvider>
     );
   }

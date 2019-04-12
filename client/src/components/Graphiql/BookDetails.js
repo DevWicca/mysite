@@ -1,17 +1,36 @@
 import React, { Component } from 'react';
-import {graphql} from 'react-apollo'
-import {getBookQuery} from '../Graphiql/queries/queries'
+import {graphql, withApollo} from 'react-apollo'
+import {getBookQuery,deletedbookid} from '../Graphiql/queries/queries'
+import { Button,Icon } from "react-materialize"
 
 class BookDetails extends Component {
+    
+    onClickhendel=()=> {
+        let id = this.props.data.book.id
+        this.props.client.mutate({
+        mutation:deletedbookid,
+          variables: {id},
+        })
+        window.location.reload()
+
+      }
+   
+
     displayBookDetails(){
-        const{book} =this.props.data;
+        const {book} =this.props.data;
         if(book){
             return(
-                <div>
-                    <h2><strong>Book Name: </strong>{book.name}</h2>
+                <div className="center">
+                    <h2 className="center"><strong>Book Name: </strong>{book.name}</h2>
                     <p><strong>Book Genre: </strong>{book.genre}</p>
                     <p><strong>Author Name: </strong>{book.author.name}</p>
-                    <p>All Books by this Author</p>
+                    <Button onClick={this.onClickhendel} waves="light" style={{marginRight: '5px'}} className="black">
+                        Delete This Book
+                        <Icon right>
+                        send
+                        </Icon>
+                    </Button>
+                    <h3>All Books by this Author</h3>
                     <ul className="othor-books">
                     {
                         book.author.books.map(item =>{
@@ -28,16 +47,16 @@ class BookDetails extends Component {
         }
     }
     render() {
-        console.log(this.props)
         return (
-            <div id="book-details">
+            <div className="center" id="book-details">
                 {this.displayBookDetails()}
             </div>
         );
     }
 }
 
-export default graphql(getBookQuery,{
+export default withApollo (
+    graphql(getBookQuery,{
     options:(props)=>{
         return{
             variables:{
@@ -45,4 +64,4 @@ export default graphql(getBookQuery,{
             }
         }
     }
-})(BookDetails);
+})(BookDetails))

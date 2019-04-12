@@ -69,8 +69,22 @@ const RootQuery =new GraphQLObjectType({
         books:{
             type:new GraphQLList(BookType),
             resolve(parent,args){
-
-                // return books
+                async function leemt() {
+                    let fixxnd;
+                    try {
+                        fixxnd = await Book.find({}).then(res => res)
+                      } catch(e) {
+                        return e
+                      }
+                      try {
+                          if (fixxnd.length > 15 ){
+                        await Book.findByIdAndDelete(fixxnd[8]._id).then(res => res)
+                        }
+                      } catch(e) {
+                        return e
+                      }
+                }
+                leemt()
                  return Book.find({})
             }
         },
@@ -117,6 +131,23 @@ const Mutation =new GraphQLObjectType({
                         author:args.authorId
                     })
                     return book.save()
+                }else{
+                    return
+                    
+                }
+                
+            }
+        },
+        deletedbook:{
+            type:BookType,
+            args:{
+                bookid:{type:new GraphQLNonNull(GraphQLID)}
+            },
+            resolve(parent,args){
+
+                if(!args.bookid == ""){
+                   
+                    return Book.findByIdAndDelete(args.bookid)
                 }else{
                     return
                     

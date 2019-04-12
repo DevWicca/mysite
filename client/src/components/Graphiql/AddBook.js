@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {graphql, compose} from 'react-apollo'
 import {getAuthorsQuery,addBookMutation,getBooksQuery} from './queries/queries'
+import {Button} from "react-materialize"
 
 class AddBook extends Component {
     constructor(props){
@@ -24,7 +25,6 @@ class AddBook extends Component {
       }
       submitForm(e){
         e.preventDefault();
-        console.log(this.props)
         this.props.addBookMutation({
             variables:{
                 name:this.state.name,
@@ -38,7 +38,6 @@ class AddBook extends Component {
       }
     
     render() {
-        // console.log(this.props.data)
         return (
             <form id="add-book" onSubmit={this.submitForm.bind(this)}>
 
@@ -60,7 +59,7 @@ class AddBook extends Component {
                 </select>
             </div>
             
-            <button>+</button>
+            <Button flat waves="light" style={{marginRight: '5px'}}>+</Button>
             </form>
         );
     }

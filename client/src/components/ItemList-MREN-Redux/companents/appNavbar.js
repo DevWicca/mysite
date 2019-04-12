@@ -13,6 +13,8 @@ import {
     NavItem,
     Container
 } from 'reactstrap'
+import { Link } from "react-router-dom"
+import {Button} from "react-materialize"
 
 class AppNavbar extends Component {
    state = {
@@ -53,6 +55,7 @@ class AppNavbar extends Component {
                 <NavItem>
                     <LoginModal/>
                 </NavItem>
+                
             </Fragment>
         )
           return (
@@ -63,6 +66,9 @@ class AppNavbar extends Component {
                         <NavbarToggler onClick={this.toggle}></NavbarToggler>
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <Link  to="/"><Button className=' blue-grey darken-3'>home</Button></Link>
+                            </NavItem>
                                 {isAuthenticated ? authLinks : guestLinks}
                             </Nav>
                         </Collapse>

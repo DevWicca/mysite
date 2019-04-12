@@ -24,7 +24,7 @@ code {
 }
 
 .Profile header {
-  background: url(https://res.cloudinary.com/wicca/image/upload/v1553730527/william-daigneault-1176273-unsplash.jpg);
+  background: url(https://images.pexels.com/photos/876610/pexels-photo-876610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-size: cover;
   background-position: center;
   min-height: 950px;
@@ -91,16 +91,16 @@ body {
   margin:12px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #880E4F;
+  border: 1px solid #26a69a;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
   cursor: pointer;
-  color: #880E4F;
+  color: rgb(3, 0, 2);
 }
 .flex{
   display: flex;
 }
 .graphiql form{
-  background: #fff;
+  background: #000000;
   padding: 20px;
   position: fixed;
   left:0;
@@ -116,34 +116,40 @@ body {
 
 .graphiql form label{
   text-align: right;
-  padding: 6px
+  padding: 6px;
+  color: white;
 }
-.graphiql form select,form input {
+.graphiql form select, input {
   margin:4px;
   padding:6px;
   box-sizing: border-box;
+  color: white;
+  background-color: #26a69a26
 }
+.graphiql form select{
+  background-color: #26a69a
+}
+
 
 .graphiql form button{
   color:#fff;
   font-size:2em;
-  background: #AD1457;
+  background:#26a69a;
   border:0;
   padding:0 10px;
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 75px;
+  left: 40px;
 
 }
 
 #book-details{
   top: 0;
   right: 0;
-  width: 40%;
   height: 100%;
-  background: #AD1457;
+  background: #26a69a;
   padding: 30px;
   overflow: auto;
   box-shadow: -2px -3px 5px rgba(0,0,0,0.3);

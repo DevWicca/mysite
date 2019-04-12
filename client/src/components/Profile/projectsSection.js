@@ -1,6 +1,9 @@
 import React from 'react';
 import { Card, Col, Row, Icon,Button } from 'react-materialize';
 import { Link } from "react-router-dom"
+import Graphqlimg from "./img/Graphql.JPG"
+import Reduximg from "./img/Redux.JPG"
+
 
 const ProjectsSection = () => (
     <section className='container section scrollspy' id='projects'>
@@ -55,15 +58,15 @@ const ProjectsSection = () => (
                     </ul>
                 </div>
             } 
-            actions={[<img alt="project" key='project' className="activator responsive-img "   src="https://res.cloudinary.com/wicca/image/upload/v1553730527/william-daigneault-1176273-unsplash.jpg"/>]}>
+            actions={[<img alt="project" key='project' className="activator responsive-img "   src={Reduximg}/>]}>
             <div>
             <Link target="_blank" to="https://github.com/DevWicca/itemlist-MREN-Redux" ><i className="fab fa-github fa-2x black-text"></i></Link>
-            <Button node={Link} to="/ItemlistMrenRedux" waves="light" className="right black">
-                life Review
+            <Link  to="/ItemlistMrenRedux"><Button className='right black'>life Review
                 <Icon right>
                 send
-                </Icon>
-            </Button>
+                </Icon></Button></Link>
+
+            
             </div>
             </Card>
         </Col>
@@ -104,15 +107,14 @@ const ProjectsSection = () => (
                     <li className='col l4 s4'><b>Git</b></li>
                 </ul>
             </div>
-            } actions={[<img alt="project1"  key='project1' className="activator responsive-img" src="https://res.cloudinary.com/wicca/image/upload/v1553730527/william-daigneault-1176273-unsplash.jpg"/>]}>
+            } actions={[<img alt="project1"  key='project1' className="activator responsive-img" src={Graphqlimg}/>]}>
             <div>
             <Link target="_blank" to="https://github.com/DevWicca/graphiql "><i className="fab fa-github fa-2x black-text"></i></Link>
-            <Button node={Link} to="/graphiql" waves="light" className="right black">
-                life Review
+            <Link  to="/graphiql"><Button className='right black'>life Review
                 <Icon right>
                 send
-                </Icon>
-            </Button>
+                </Icon></Button></Link>
+
             </div>
             </Card>
         </Col>
