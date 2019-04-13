@@ -4,6 +4,7 @@ const config =require('config')
 const graphqlHTTP =require('express-graphql')
 const schema =require('./schema/schema')
 const cors =require('cors')
+const path = require('path')
 // import  Routes
 const ItemRoutes = require('./Routes/api/items')
 const UsersRoutes = require('./Routes/api/user')
@@ -33,5 +34,15 @@ app.use('/graphql',graphqlHTTP({
 app.use('/api/items',ItemRoutes)
 app.use('/api/user',UsersRoutes)
 app.use('/api/auth',AuthRoutes)
+
+// Serve static assets if in production
+if (process.env.NODE_ENV === 'production'){
+    // Set static folder
+    app.use(express.static('client/build'))
+
+    app.get('*', (req,res) =>{
+        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+    })
+}
 
 module.exports = app
