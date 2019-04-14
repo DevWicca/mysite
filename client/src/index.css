@@ -22,6 +22,12 @@ code {
 .btn{
   color: #fff ;
 }
+.sidenav li>a>i{
+  margin: 0px -21px 21px -9px;
+}
+.sidenav li>a{
+  padding: 0px 15px;
+}
 
 .Profile header {
   background: url(https://images.pexels.com/photos/876610/pexels-photo-876610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
@@ -33,10 +39,7 @@ code {
   padding-top: 4vw ;
   padding-bottom: 4vw ;
 }
-#mobile-nav {
-  background-color: black ;
-  
-}
+
 .Profile .paddingbot{
   padding-bottom: 3vw ;
 }
