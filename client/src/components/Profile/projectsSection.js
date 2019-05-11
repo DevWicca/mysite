@@ -13,10 +13,7 @@ const ProjectsSection = () => (
             <Card title="Itemlist MREN Redux" 
             reveal={
                 <div>
-                    <p>Thats is a smale app but it cover all the technology especially Redux and state management 
-                    It uses Redux to add and delete items and only user can do that 
-                    With user Register and Login system using Redux and using Bcryptjs to encrypt the password 
-                    and save it to database and sample validation </p>
+                    <p>This is a simple app but it covers all the technology especially Redux and state management It uses Redux to add and remove items and only user can do that With user Register and Login system using Redux and using Bcryptjs to encrypt the password and save it to database and sample validation</p>
                     <ul className="row">
                     <li className="col m6 l12">
                             <Icon left>check</Icon>
@@ -60,7 +57,7 @@ const ProjectsSection = () => (
             } 
             actions={[<img alt="project" key='project' className="activator responsive-img "   src={Reduximg}/>]}>
             <div>
-            <Link target="_blank" to="https://github.com/DevWicca/itemlist-MREN-Redux" ><i className="fab fa-github fa-2x black-text"></i></Link>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/DevWicca/itemlist-MREN-Redux" ><i className="fab fa-github fa-2x black-text"></i></a>
             <Link  to="/ItemlistMrenRedux"><Button className='right black'>life Review
                 <Icon right>
                 send
@@ -73,9 +70,7 @@ const ProjectsSection = () => (
         <Col m={12} l={6} s={12} >
             <Card title="GraphiQL" reveal={
                 <div>
-                <p>Thats is a smale app but it cover all the technology especially GraphQL and how data structure
-                Work it uses GraphQL to add and get books and authors from database and shows how data can
-                Work together to make great data structure and uses React and Apollo on the Client Side to show the books and the authors 
+                <p>This is a simple app, but it covers all the technology, especially GraphQL and how data structure Work it uses GraphQL to add and get books and authors from the database and shows how data can Work together to make great data structure and uses React and Apollo on the Client Side to show the books and the authors
                 </p>
                     <ul className="row">
                             <li className="col m6 l12">
@@ -109,7 +104,7 @@ const ProjectsSection = () => (
             </div>
             } actions={[<img alt="project1"  key='project1' className="activator responsive-img" src={Graphqlimg}/>]}>
             <div>
-            <Link target="_blank" to="https://github.com/DevWicca/graphiql "><i className="fab fa-github fa-2x black-text"></i></Link>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/DevWicca/graphiql "><i className="fab fa-github fa-2x black-text"></i></a>
             <Link  to="/graphiql"><Button className='right black'>life Review
                 <Icon right>
                 send

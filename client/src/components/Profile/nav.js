@@ -24,7 +24,6 @@ const nav = () => {
                 <ul>
                     <li><a target="_blank" rel="noopener noreferrer"  href="https://github.com/DevWicca"   className="btn-floating btn-small black "><i className="fab fa-github fa-2x  white-text"></i></a></li>
                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/walid-mostafa-513b99182/" className="btn-floating btn-small black "><i className="fab fa-linkedin fa-2x white-text"></i></a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/DR3YNu" className="btn-floating btn-small black "><i className="fab fa-discord fa-2x white-text"></i></a></li>
                     </ul>
                 </Navbar>
             </Container>
