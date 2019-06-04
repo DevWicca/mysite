@@ -35,7 +35,7 @@ function shouldCompress (req, res) {
   return compression.filter(req, res)
 }
 
-pp.use(compression({
+app.use(compression({
     level:6,
     filter:shouldCompress
 }))
@@ -55,7 +55,7 @@ app.use('/api/auth',AuthRoutes)
 if (process.env.NODE_ENV === 'production'){
     // Set static folder
     app.use(express.static('client/build'))
-    a
+    
 
     app.get('*', (req,res) =>{
         res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
