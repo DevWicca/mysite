@@ -5,6 +5,7 @@ const graphqlHTTP =require('express-graphql')
 const schema =require('./schema/schema')
 const cors =require('cors')
 const path = require('path')
+const compression = require("compression");
 // import  Routes
 const ItemRoutes = require('./Routes/api/items')
 const UsersRoutes = require('./Routes/api/user')
@@ -39,6 +40,9 @@ app.use('/api/auth',AuthRoutes)
 if (process.env.NODE_ENV === 'production'){
     // Set static folder
     app.use(express.static('client/build'))
+    app.use(compression({
+    level:6
+}))
 
     app.get('*', (req,res) =>{
         res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
