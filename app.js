@@ -25,6 +25,21 @@ useCreateIndex: true },
 app.use(express.json())
 app.use(cors())
 
+function shouldCompress (req, res) {
+  if (req.headers['x-no-compression']) {
+    // don't compress responses with this request header
+    return false
+  }
+ 
+  // fallback to standard filter function
+  return compression.filter(req, res)
+}
+
+pp.use(compression({
+    level:6,
+    filter:shouldCompress
+}))
+
 app.use('/graphql',graphqlHTTP({
     schema,
     graphiql:true
@@ -40,9 +55,7 @@ app.use('/api/auth',AuthRoutes)
 if (process.env.NODE_ENV === 'production'){
     // Set static folder
     app.use(express.static('client/build'))
-    app.use(compression({
-    level:6
-}))
+    a
 
     app.get('*', (req,res) =>{
         res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
